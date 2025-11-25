@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Username Generator</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d452879ad9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="jersey-15-regular">
+        <i class="fa-solid fa-circle-user"></i><br />Username Generator
+      </h1>
+
+      <div class="input-group">
+        <label>Google Gemini API Key</label>
+        <input
+          type="password"
+          id="apiKey"
+          placeholder="Paste your API Key here..."
+        />
+
+        <label
+          class="checkbox-container"
+          style="margin-top: 5px; font-size: 0.8rem; color: #888"
+        >
+          <input type="checkbox" id="saveKeyCheck" />
+          <span class="checkmark"></span>
+          Remember my API Key
+        </label>
+      </div>
+
+      <div class="input-group">
+        <label>Pick a Theme</label>
+        <input
+          type="text"
+          id="themeInput"
+          ,
+          class="themeInput"
+          placeholder="Tech + Fruits or Dark Souls Boss"
+        />
+      </div>
+
+      <div class="options">
+        <label class="checkbox-container">
+          <input type="checkbox" id="checkNumbers" />
+          <span class="checkmark"></span>
+          Add Numbers
+        </label>
+        <label class="checkbox-container">
+          <input type="checkbox" id="checkTitles" />
+          <span class="checkmark"></span>
+          Add Titles
+        </label>
+      </div>
+
+      <button id="generateBtn">Generate</button>
+
+      <!-- <div id="loader" class="hidden">Generating...</div> -->
+
+      <div class="result-section hidden" id="resultContainer">
+        <h2>Main Pick</h2>
+        <div class="result-box main-result">
+          <span id="mainOutput">Loading...</span>
+          <button class="copy-btn" onclick="copyText('mainOutput')">
+            Copy
+          </button>
+        </div>
+
+        <h3>Alternatives</h3>
+        <div id="extraOutputs"></div>
+      </div>
+      <div class="links">
+        <a href="https://github.com/keneji404" target="_blank"
+          ><i class="fa-brands fa-github"></i> GitHub</a
+        >
+      </div>
+    </div>
+
+    <!-- THIS IMPORT MAP ALLOWS US TO USE GOOGLE AI WITHOUT NPM -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+
+    <!-- Main Logic Script -->
+    <script type="module" src="script.js"></script>
+
+    <!-- Copy Function Helper (Needs to be global) -->
+    <script>
+      function copyText(elementId) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          const btn = document.querySelector(
+            `button[onclick="copyText('${elementId}')"]`
+          );
+          const originalText = btn.innerText;
+          btn.innerText = "Copied!";
+          setTimeout(() => (btn.innerText = originalText), 1000);
+        });
+      }
+    </script>
+  </body>
+</html>
