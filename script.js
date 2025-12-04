@@ -1,4 +1,3 @@
-// Note: We use "import" now instead of "require"
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const apiKeyInput = document.getElementById("apiKey");
@@ -128,3 +127,4 @@ function displayResults(names) {
     extraOutputs.appendChild(div);
   }
 }
+
