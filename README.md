@@ -8,8 +8,8 @@ Gives you username ideas based on themes or take inspiration from your favorite 
 
 - **User Privacy:** Your API key will get saved locally in your web browser.
 - **Thematic Search**
-  - You can combine two themes (theme1 + theme2)
-  - Get Ideas from existing media (shows, games, books etc.)
+  - You can combine two themes `<theme1> + <theme2>`
+  - Get Ideas from existing media `Megaman X Boss name ideas`
 
 ---
 
@@ -39,18 +39,6 @@ Gives you username ideas based on themes or take inspiration from your favorite 
 ### Dev Notes
 
 This app was made purely of learning purposes on how to implement AI model to my projects.
-
----
-
-### Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-<!-- 1. Fork the project.
-2. Create your feature branch `git checkout -b feature/AmazingFeature`.
-3. Commit your changes `git commit -m 'Add some AmazingFeature'`.
-4. Push to the branch `git push origin feature/AmazingFeature`.
-5. Open a Pull Request. -->
 
 ---
 
