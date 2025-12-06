@@ -25,7 +25,7 @@ Gives you username ideas based on themes or take inspiration from your favorite 
 
 1.  Get your API key [here](https://ai.google.dev/gemini-api/docs/api-key) from Google.
 2.  Copy and paste your API key in the Username Generator (You can also save your API key for your convenience).
-3.  Now you can generating.
+3.  Now you can start generating.
 
 ---
 
